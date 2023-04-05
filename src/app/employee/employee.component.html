@@ -1,0 +1,16 @@
+
+<div *ngFor="let employee of employeeRecord">
+
+    <h1>NAME: {{employee.employeeName}}   </h1>
+
+    <h4> AGE : {{employee.employeeAge}}   </h4>
+    
+    <h5>EMAIL ID:  {{employee.employeeEmailId}}</h5>
+    
+
+
+    <ul  *ngFor="let skill of employee.employeeSkills"  >
+        <li> {{skill}}  </li>
+    </ul>
+</div>
+
