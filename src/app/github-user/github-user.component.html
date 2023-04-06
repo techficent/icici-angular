@@ -1,0 +1,19 @@
+<p>github-user works!</p>
+
+
+
+
+<button  (click)="fetchData()"   >CLICK THIS</button>
+
+
+<div *ngIf="isReady">
+    Name:  {{   user.name     }}
+    <br>
+    ID : {{    user.id    }}
+    <br>
+    BIO : {{     user.bio      }}
+    <br>
+    Location : {{      user.location      }}
+    <br>
+    Company : {{    user.company     }}
+</div>

@@ -1,0 +1,15 @@
+<p>crypto-single-price works!</p>
+
+
+<div *ngIf="isReady">
+
+    USD : {{   response.USD   }}
+    JPY : {{response.JPY}}
+    EUR : {{ response.EUR }}
+
+</div>
+
+
+<div  *ngIf="!isReady">
+<button (click)="fetchResponse()">CLICK THIS</button>
+</div>

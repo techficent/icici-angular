@@ -1,0 +1,97 @@
+https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=10
+
+
+
+api.github.com/users/<user-name>
+
+HTTP TERMS              DATABASE TERMS
+GET REQUEST                READ OPERATION
+POST REQUEST               CREATE OPERATION
+PUT REQUEST                 UPDATE OPERATION
+DELETE REQUEST              DELETE OPERATION
+
+
+
+
+step 1: Create a model based on github response pattern using an interface
+
+step 2: Create a service for fetching api response from github api
+
+step 3: Inject the service into the component/components of your choice
+
+step 4 : Call the service methods. Gain access to data
+
+step 5 : Render the data in the desired format in the front-end view
+
+
+
+
+
+
+
+
+
+
+
+
+
+HOW DID THIS WORK???
+
+step 1 : user visits the web page
+
+step 2: web page shows app.component.html view
+step 3 : child component (github-user-component) is now added to DOM
+
+step 4 : since github-api service is a dependency of github-user-component, it has
+            to be made available (initialized) first. [control transfers to service file]
+
+step 5 : angular observes that HTTPCLIENT is a dependency of the github-api-service.
+            so httpclient service dependency gets added NOW!
+
+step 6 : service is now available for use. We can start executing the HTML part
+
+            of github-component now [button gets displayed]
+
+step  7 : user clicks the button--->Button calls the service method--->An observable object is now returned
+
+step 8 : component subscribes to this response. Fetches next item and saves it to user class property
+
+step 9:  after the last response is received (first response since api returns a single object), isReady
+            becomes true
+
+step 10 : div tag with all bindings are now visible in the view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
