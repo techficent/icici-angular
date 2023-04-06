@@ -10,6 +10,7 @@ import { EmployeeWithServiceComponent } from './employee-with-service/employee-w
 import { GithubUserComponent } from './github-user/github-user.component';
 import { CryptoSinglePriceComponent } from './crypto-single-price/crypto-single-price.component';
 import { GithubReposComponent } from './github-repos/github-repos.component';
+import { CryptoHistoryComponent } from './crypto-history/crypto-history.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GithubReposComponent } from './github-repos/github-repos.component';
     EmployeeWithServiceComponent,
     GithubUserComponent,
     CryptoSinglePriceComponent,
-    GithubReposComponent
+    GithubReposComponent,
+    CryptoHistoryComponent
   ],
   imports: [
     BrowserModule,
