@@ -1,0 +1,177 @@
+angular application architecture
+
+
+Module : a collection of multiple related components
+	e.g: A order module can consist of 2 components
+		a) A shipping address component
+		b) payments component
+	
+
+Components: a component is the smallest independent unit of an angular app that serves
+		one purpose inside the app
+
+
+MVC architecture
+
+
+
+Every component in angular has 4 files
+
+
+1) <component-name>.component.ts: logic for component's functionality
+2) <component-name>.component.html : view part of the component goes here!
+3) <component-name>.component.css : styling for the component goes here. COMPONENT SPECIFIC
+4) <component-name>.component.spec.ts : write unit tests for this component here
+
+
+
+
+	
+
+
+
+
+
+app-module
+|
+|
+|
+app.component -------------> customer-component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+STYLE BINDING
+
+
+
+1) user goes to the web browser.
+	a) app component gets rendered
+	b) control gets transferred to app-customer(because we wrote this tag in app.component.html)
+	c) customer component gets rendered
+	d) upon clicking the button, style of paragraph tag should change from style2 to style1(css classes)
+
+
+
+
+
+employee
+
+name : "Ajay"
+age : 32
+email ID : "ajay@abc.com"
+skills : ["programming", "Machine Learning"],
+
+
+AJAY
+
+age 32
+email id ajay@abc.com
+
+	.programming
+	.Machine Learning
+
+
+
+
+
+
+
+
+
+
+step 1 : Make an Employee model based on interface
+
+step 2: In a component, create an object based on Employee interface
+
+step 3 : Make an HTML view for the component in step 2
+
+step 4 : use bindings to map correct properties to correct html tags
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How to display data for multiple employee Records
+
+step 1 : Create a model for Employee
+step 2 : create a blank array for storing Employee objects
+step 3 : create multiple objects for different employee records. Append
+	them to the blank array one by one
+
+step 4 : apply a ngFor on the array
+		a) print name, age and ID
+		b) apply ngFor on skills array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
