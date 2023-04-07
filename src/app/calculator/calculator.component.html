@@ -1,0 +1,27 @@
+<div>
+
+    Enter First Number :  <input type="number"  (input)="menuFunction()"  [(ngModel)]="firstNumber"  name="n1" id="1">
+    <br>
+    Enter Second Number :  <input type="number" (input)="menuFunction()"  [(ngModel)]="secondNumber" name="n2" id="2">
+    <br>
+    {{optionText}} of {{firstNumber}} and {{secondNumber}} is {{result}}
+        
+</div>
+
+
+<select  [(ngModel)]="optionText"   (ngModelChange)="mapOptionToEnum()"  >
+
+    <option>  Addition </option>
+    <option>  Subtraction </option>
+    <option>  Multiplication </option>
+    <option>  Division </option>
+
+</select>
+
+
+<!-- 
+<div>
+
+    <button (click)="addition()"  >  Fetch Answer  </button>
+
+</div> -->

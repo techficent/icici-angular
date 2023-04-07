@@ -11,6 +11,9 @@ import { GithubUserComponent } from './github-user/github-user.component';
 import { CryptoSinglePriceComponent } from './crypto-single-price/crypto-single-price.component';
 import { GithubReposComponent } from './github-repos/github-repos.component';
 import { CryptoHistoryComponent } from './crypto-history/crypto-history.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { FormsModule } from '@angular/forms';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,15 @@ import { CryptoHistoryComponent } from './crypto-history/crypto-history.componen
     GithubUserComponent,
     CryptoSinglePriceComponent,
     GithubReposComponent,
-    CryptoHistoryComponent
+    CryptoHistoryComponent,
+    CalculatorComponent,
+    PipeDemoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
