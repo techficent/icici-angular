@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Option } from '../Option';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
@@ -67,4 +68,8 @@ export class CalculatorComponent {
   division() : void {
     this.result = this.firstNumber / this.secondNumber
   } 
+
+  ops = new FormControl('');
+
+  opsList: string[] = ["Addition","Subtraction", "Multiplication","Division"];
 }

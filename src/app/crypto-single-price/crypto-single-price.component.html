@@ -9,7 +9,14 @@
 
 </div>
 
+<div>
+    Crypto Currency Name: <input type="text"   [(ngModel)]="currencyName">
+</div>
+
 
 <div  *ngIf="!isReady">
-<button (click)="fetchResponse()">CLICK THIS</button>
+    <button (click)="fetchResponse()" mat-raised-button color="accent">Click THIS</button>
+
 </div>
+
+

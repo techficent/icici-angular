@@ -37,7 +37,7 @@ ii) Make a HTML view for information that follows the following
     a) All name related output must be in upper case
     b) Company name text should appear in BLUE TEXT
     c) Try to hide button to fetch API after data is visible.
-    d) Allow user to reset web page by making fetch button visib	le after users clicks on a button called "reset"
+    d) Allow user to reset web page by making fetch button visible after users clicks on a button called "reset"
 
 
 

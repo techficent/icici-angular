@@ -1,27 +1,31 @@
 <div>
 
-    Enter First Number :  <input type="number"  (input)="menuFunction()"  [(ngModel)]="firstNumber"  name="n1" id="1">
+    Enter First Number :  <input type="number" matInput (input)="menuFunction()"  [(ngModel)]="firstNumber" name="n1" id="1">
     <br>
-    Enter Second Number :  <input type="number" (input)="menuFunction()"  [(ngModel)]="secondNumber" name="n2" id="2">
+    Enter Second Number :  <input type="number" matInput (input)="menuFunction()"  [(ngModel)]="secondNumber" name="n2" id="2">
     <br>
     {{optionText}} of {{firstNumber}} and {{secondNumber}} is {{result}}
         
 </div>
 
 
-<select  [(ngModel)]="optionText"   (ngModelChange)="mapOptionToEnum()"  >
-
+<!-- <select  [(ngModel)]="optionText"   (ngModelChange)="mapOptionToEnum()"  >
     <option>  Addition </option>
     <option>  Subtraction </option>
     <option>  Multiplication </option>
     <option>  Division </option>
+</select> -->
 
-</select>
-
-
-<!-- 
-<div>
-
-    <button (click)="addition()"  >  Fetch Answer  </button>
-
-</div> -->
+<mat-form-field appearance="fill">
+    <mat-label>Operations</mat-label>
+    <mat-select [formControl]="ops" multiple>
+      <!-- <mat-select-trigger>
+        {{ops.value?.[0] || ''}}
+        <span *ngIf="(ops.value?.length || 0) > 1" class="example-additional-selection">
+          (+{{(ops.value?.length || 0) - 1}} {{ops.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger> -->
+      <mat-option *ngFor="let op of opsList" [value]="op">{{op}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
