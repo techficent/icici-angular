@@ -10,6 +10,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { SalaryComponent } from './salary/salary.component';
 import { UpdateDataComponent } from './update-data/update-data.component';
 import { EmployeeWithIdComponent } from './employee-with-id/employee-with-id.component';
+import { TemplateFormsDemoComponent } from './template-forms-demo/template-forms-demo.component';
 
 const routes: Routes = [
   {path : "", component : LandingComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   },
   //path parameter
   {path : "details/:eid",component : EmployeeWithIdComponent},
+  {path : "template", component: TemplateFormsDemoComponent},
   {path : "**", component: ErrorComponent}
 ];
 
