@@ -1,0 +1,132 @@
+<div class="container">
+
+    <h2> User Info </h2>
+
+    <form  [formGroup]="userForm"  (ngSubmit)="onSave()"> 
+
+
+    <div class="form-group">
+
+      <label> Name </label>
+      <input type="text" class = "form-control" formControlName="name" >
+        
+    <div *ngIf="userForm.controls['name'].hasError('required')">
+        Please enter a name
+    </div>
+
+    <div *ngIf="userForm.controls['name'].hasError('minlength')">
+    Please enter a name of at least 4 characters
+    </div>
+
+    <div *ngIf="userForm.controls['name'].hasError('maxlength')">
+    Please enter a name of at the most 10 characters
+    </div>
+
+    </div>
+
+    <br>
+    <br>
+
+
+
+    <div class="form-group">
+
+      <label> Age </label>
+      <input type="text" class = "form-control" formControlName="age" >
+        
+    <div *ngIf="userForm.controls['age'].hasError('required')">
+        Please enter a valid age between 0 and 150
+    </div>
+
+    <div *ngIf="userForm.controls['age'].hasError('min')">
+        Minimum age should be 0
+    </div>
+
+    <div *ngIf="userForm.controls['age'].hasError('max')">
+        Maximum age should be 150
+    </div>
+
+    </div>
+
+
+    <br>
+    <br>
+
+    <div class="form-group">
+
+      <label> Gender </label>
+      <select class="form-control" formControlName="gender">
+          <option value="MALE"> MALE  </option>  
+          <option value="FEMALE"> FEMALE  </option>  
+          <option value="OTHER"> OTHER  </option>  
+      </select>
+        
+      <div *ngIf="userForm.controls['gender'].hasError('required')">
+          Please select a gender option
+      </div>
+
+    </div>
+    
+
+    <br>
+    <br>
+
+
+    <div class="form-group" >
+
+      <label> Email </label>
+      <input type="email" class = "form-control" formControlName="email" >
+    
+
+
+      <div *ngIf="userForm.controls['email'].hasError('pattern')">
+        Please enter acceptable email ID
+    </div>
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div formGroupName="address">
+
+      <div class="form-group" > 
+        <label> Street </label>
+        <input type="text" class = "form-control" formControlName="street">
+        
+      </div>
+      
+
+      <br>
+    <div class="form-group">
+
+      <label> City </label>
+      <input type="text" class = "form-control"  formControlName="city">
+
+    </div>
+
+    <br>
+
+    <div class="form-group" >
+
+      <label> Zip Code </label>
+      <input type="text" class = "form-control" formControlName="postal_code">
+     
+    
+    </div>
+
+
+    </div>
+
+
+    <br>
+  <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">  Submit Form  </button>
+</form>
+
+
+<div *ngIf="isFormReady">
+
+    <app-model-form-child  [formData]="userForm.value"  ></app-model-form-child>
+
+</div>

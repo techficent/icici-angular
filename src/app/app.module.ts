@@ -22,7 +22,8 @@ import { ErrorComponent } from './error/error.component';
 import { SalaryComponent } from './salary/salary.component';
 import { UpdateDataComponent } from './update-data/update-data.component';
 import { EmployeeWithIdComponent } from './employee-with-id/employee-with-id.component';
-import { TemplateFormsDemoComponent } from './template-forms-demo/template-forms-demo.component'; 
+import { TemplateFormsDemoComponent } from './template-forms-demo/template-forms-demo.component';
+import { ModelDrivenFormDemoComponent } from './model-driven-form-demo/model-driven-form-demo.component'; 
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TemplateFormsDemoComponent } from './template-forms-demo/template-forms
     SalaryComponent,
     UpdateDataComponent,
     EmployeeWithIdComponent,
-    TemplateFormsDemoComponent
+    TemplateFormsDemoComponent,
+    ModelDrivenFormDemoComponent
   ],
   imports: [
     BrowserModule,
